@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compare your MAL</title>
+    <!-- jQuery and Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- meta for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- My js and css -->
+    <script src="compareMal.js"></script>
+    <link rel="stylesheet" href="compareMal.css">
+</head>
+<body>
+<div class="page-header center">
+    <a href="index.html"><h1>MyAnimeList Compare</h1></a>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div id="form">
+                <h2 class="center">Please enter the usernames which should be compared</h2>
+                <div class="row">
+                    <div class="col-sm-6" id="leftUserfield">
+                        <label for="user1">First User:</label>
+                        <input type="text" class="form-control userin" id="user1">
+                    </div>
+                    <div class="col-sm-6" id="rightUserfield">
+                        <label for="user2">Second User:</label>
+                        <input type="text" class="form-control userin"  id="user2">
+                    </div>
+                </div>
+                <br>
+                <input type="button" class="btn btn-info left" id="addUser" value="Add User" disabled>
+                <input type="button" class="btn btn-info right" id="compare" value="Compare">
+            </div>
+            <div id="result" style="display: none">
+                <table class="table table-hover" id="resultTable">
+                    <thead>
+                        <tr>
+                            <th>Nr.</th>
+                            <th>Picture</th>
+                            <th>Name</th>
+                            <th>Episodes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</div>
+</body>
+</html>

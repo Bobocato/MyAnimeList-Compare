@@ -1,0 +1,17 @@
+.center{
+    text-align: center;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+
+img{
+    height: 50px;
+}
+
+.clickable{
+    cursor: pointer;
+}
