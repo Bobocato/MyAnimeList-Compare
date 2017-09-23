@@ -25,39 +25,28 @@
 </div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-8">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
             <div id="form">
-                <h2 class="center">Please enter the usernames which should be compared</h2>
-                <div class="row">
-                    <div class="col-sm-6" id="leftUserfield">
-                        <label for="user1">First User:</label>
-                        <input type="text" class="form-control userin" id="user1">
+                <form action="compareMAL.php" method="get">
+                    <h2 class="center">Please enter the usernames which should be compared</h2>
+                    <div class="row">
+                        <div class="col-sm-6" id="leftUserfield">
+                            <label for="user1">First User:</label>
+                            <input type="text" name="1" class="form-control userin" id="user1">
+                        </div>
+                        <div class="col-sm-6" id="rightUserfield">
+                            <label for="user2">Second User:</label>
+                            <input type="text" name="2" class="form-control userin" id="user2">
+                        </div>
                     </div>
-                    <div class="col-sm-6" id="rightUserfield">
-                        <label for="user2">Second User:</label>
-                        <input type="text" class="form-control userin"  id="user2">
-                    </div>
-                </div>
-                <br>
-                <input type="button" class="btn btn-info left" id="addUser" value="Add User" disabled>
-                <input type="button" class="btn btn-info right" id="compare" value="Compare">
-            </div>
-            <div id="result" style="display: none">
-                <table class="table table-hover" id="resultTable">
-                    <thead>
-                        <tr>
-                            <th>Nr.</th>
-                            <th>Picture</th>
-                            <th>Name</th>
-                            <th>Episodes</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tableBody"></tbody>
-                </table>
+                    <br>
+                    <input type="button" class="btn btn-info left" id="addUser" value="Add User">
+                    <input type="submit" class="btn btn-info right" id="compare" value="Compare">
+                </form>
             </div>
         </div>
-        <div class="col-sm-2"></div>
+        <div class="col-sm-1"></div>
     </div>
 </div>
 </body>
