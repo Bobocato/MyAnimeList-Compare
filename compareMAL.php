@@ -83,11 +83,11 @@ function errorPage() {
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-10">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
                 <h2 class="center">Something went wrong! FeelsBadMan</h2>
             </div>
-            <div class="col-sm-1"></div>
+            <div class="col-sm-2"></div>
         </div>
     </div>
     </body>
@@ -103,8 +103,8 @@ function resultPage($results) {
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-10">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
                 <div id="result">
                     <table class="table table-hover" id="resultTable">
                         <thead>
@@ -140,7 +140,7 @@ function resultPage($results) {
                     </table>
                 </div>
             </div>
-            <div class="col-sm-1"></div>
+            <div class="col-sm-2"></div>
         </div>
     </div>
     </body>
