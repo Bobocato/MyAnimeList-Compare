@@ -45,6 +45,10 @@ function compareDuplicates($duplicates1, $duplicates2) {
     return $compared;
 }
 
+function compareByName($a, $b){
+    return strcmp($a["series_title"], $b["series_title"]);
+}
+
 function headerPage() {
     ?>
     <!DOCTYPE html>
@@ -81,7 +85,7 @@ function errorPage() {
         <div class="row">
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
-                <h2>Something went wrong! FeelsBadMan</h2>
+                <h2 class="center">Something went wrong! FeelsBadMan</h2>
             </div>
             <div class="col-sm-1"></div>
         </div>
@@ -144,7 +148,11 @@ function resultPage($results) {
     <?php
 }
 
-$userNames = $_GET;
+if($_GET[1] == ""){
+    $userNames = array();
+} else {
+    $userNames = $_GET;
+}
 
 switch (count($userNames)) {
     case 0:
@@ -159,6 +167,7 @@ switch (count($userNames)) {
         $lists = array();
         $lists = getList($userNames);
         $duplicates = compareLists($lists, 0, 1);
+        usort($duplicates,"compareByName");
         headerPage();
         resultPage($duplicates);
         //var_dump($duplicates);
@@ -169,6 +178,7 @@ switch (count($userNames)) {
         $duplicates1 = compareLists($lists, 0, 1);
         $duplicates2 = compareLists($lists, 0, 2);
         $compared = compareDuplicates($duplicates1, $duplicates2);
+        usort($compared,"compareByName");
         headerPage();
         resultPage($compared);
         //var_dump($compared);
@@ -179,6 +189,7 @@ switch (count($userNames)) {
         $duplicates1 = compareLists($lists, 0, 1);
         $duplicates2 = compareLists($lists, 2, 3);
         $compared = compareDuplicates($duplicates1, $duplicates2);
+        usort($compared,"compareByName");
         headerPage();
         resultPage($compared);
         //var_dump($compared);
